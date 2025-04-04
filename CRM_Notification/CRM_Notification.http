@@ -1,0 +1,6 @@
+@CRM_Notification_HostAddress = http://localhost:5056
+
+GET {{CRM_Notification_HostAddress}}/api/Notification/Send
+Accept: application/json
+
+###
