@@ -28,10 +28,10 @@ namespace CRM_Notification.Web.Controllers
 
             var notification = new NotificationRequest
             {
-                To = "nithish1206official@gmail.com",
-                Subject = "Test",
-                Message = "Hello from RabbitMQ!",
-                Type = "email"
+                To = request.To,
+                Subject = request.Subject,
+                Message = request.Message,
+                Type = request.Type
             };
 
             var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(notification));
