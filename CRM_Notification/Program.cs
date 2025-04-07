@@ -1,9 +1,6 @@
 using CRM_Notification.Application.NotificationService;
-using Microsoft.Extensions.Hosting; // Add this using directive
-using Microsoft.Extensions.DependencyInjection;
 using CRM_Notification.Application.Interfaces;
-using CRM_Notification.Application.MessageBus;
-using NotificationService.MessageBus; // Add this using directive
+using NotificationService.MessageBus; 
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -47,6 +47,7 @@ namespace NotificationService.MessageBus
             _channel.Close();
             _connection.Close();
             base.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

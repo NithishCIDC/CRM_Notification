@@ -20,7 +20,7 @@ namespace CRM_Notification.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Send([FromBody] NotificationRequest request)
+        public IActionResult Send([FromBody] NotificationRequest request)
         {
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using var connection = factory.CreateConnection();

@@ -12,7 +12,7 @@ namespace CRM_Notification.Application.NotificationService
         public async Task SendAsync(NotificationRequest request)
         {
             var email = new MimeMessage();
-            email.From.Add(new MailboxAddress("CRM","nithish1206official@gmail.com"));
+            email.From.Add(new MailboxAddress("CRM", "theboyscidc@gmail.com"));
             email.To.Add(new MailboxAddress("",request.To));
             email.Subject = request.Subject;
 
@@ -26,7 +26,6 @@ namespace CRM_Notification.Application.NotificationService
             await smtp.AuthenticateAsync("theboyscidc@gmail.com", "zfgrjyxnctdhssxo");
             await smtp.SendAsync(email);
             await smtp.DisconnectAsync(true);
-            await Task.CompletedTask;
         }
     }
 
