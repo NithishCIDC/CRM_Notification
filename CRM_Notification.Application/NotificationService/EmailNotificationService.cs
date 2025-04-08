@@ -3,6 +3,7 @@ using CRM_Notification.Domain.Models;
 using MimeKit.Text;
 using MimeKit;
 using MailKit.Net.Smtp;
+using Serilog;
 
 
 namespace CRM_Notification.Application.NotificationService
@@ -25,6 +26,7 @@ namespace CRM_Notification.Application.NotificationService
             await smtp.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
             await smtp.AuthenticateAsync("theboyscidc@gmail.com", "zfgrjyxnctdhssxo");
             await smtp.SendAsync(email);
+            Log.Information("Email sent to {To} with subject {Subject}", request.To, request.Subject);
             await smtp.DisconnectAsync(true);
         }
     }
