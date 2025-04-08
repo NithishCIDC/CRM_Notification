@@ -1,6 +1,6 @@
 using CRM_Notification.Application.NotificationService;
 using CRM_Notification.Application.Interfaces;
-using NotificationService.MessageBus; 
+using CRM_Notification.Application.MessageBus;
 
 var builder = WebApplication.CreateBuilder(args);
 

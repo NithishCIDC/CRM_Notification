@@ -7,7 +7,7 @@ using RabbitMQ.Client.Events;
 using System.Text;
 using System.Text.Json;
 
-namespace NotificationService.MessageBus
+namespace CRM_Notification.Application.MessageBus
 {
     public class RabbitMqConsumer : BackgroundService
     {
